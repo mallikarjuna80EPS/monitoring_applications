@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Server monitoring{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="{{ url_for('sign_in') }}">Server monitoring</a>
+    <nav>
+      <a href="{{ url_for('sign_in') }}">Sign in</a>
+      <a href="{{ url_for('servers') }}">Servers</a>
+      <a href="{{ url_for('metrics') }}">Metrics</a>
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Metrics — Server monitoring{% endblock %}
+
+{% block content %}
+<section class="panel">
+  <div class="panel-head">
+    <div>
+      <h1>{{ server.name }}</h1>
+      <p class="host">{{ server.hostname }}</p>
+    </div>
+    <a class="text-link" href="{{ url_for('servers') }}">Back to servers</a>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <h2>CPU</h2>
+      <p class="value">—</p>
+      <p class="unit">percent</p>
+    </article>
+    <article class="card">
+      <h2>Memory</h2>
+      <p class="value">—</p>
+      <p class="unit">used of — total</p>
+    </article>
+    <article class="card">
+      <h2>Network</h2>
+      <p class="value">—</p>
+      <p class="unit">receive / transmit</p>
+    </article>
+  </div>
+
+  <h2>Listening ports</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Port</th>
+        <th>Address</th>
+        <th>Process</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">Placeholder values. Live metrics are not collected yet.</p>
+</section>
+{% endblock %}
