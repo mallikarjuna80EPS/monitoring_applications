@@ -33,13 +33,21 @@ body {
   font-weight: 650;
 }
 
-.site-header nav {
-  display: flex;
-  gap: 1rem;
+.site-header form {
+  margin: 0;
 }
 
-.site-header nav a:hover,
+.header-action {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.header-action:hover,
 .text-link:hover {
+  background: transparent;
   text-decoration: underline;
 }
 
@@ -166,6 +174,18 @@ button:hover {
   font-size: 0.88rem;
 }
 
+.metric-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0.45rem 0 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-line span:last-child {
+  font-weight: 650;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -187,6 +207,10 @@ th {
 .row-actions {
   text-align: right;
   white-space: nowrap;
+}
+
+.row-actions form {
+  display: inline;
 }
 
 .row-actions button {

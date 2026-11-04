@@ -3,4 +3,5 @@ __pycache__/
 *.py[cod]
 config.json
 servers.json
+.session_secret
 data/

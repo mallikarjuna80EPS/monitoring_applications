@@ -6,14 +6,16 @@
 <section class="panel narrow">
   <h1>Sign in</h1>
   <p class="lede">One shared admin account for this local demo.</p>
-  <form method="post" action="{{ url_for('sign_in') }}" onsubmit="return false;">
+  <form method="post" action="{{ url_for('sign_in') }}">
     <label for="username">Username</label>
-    <input id="username" name="username" type="text" autocomplete="username" required>
+    <input id="username" name="username" type="text" autocomplete="username" value="{{ username or '' }}" required>
 
     <label for="password">Password</label>
     <input id="password" name="password" type="password" autocomplete="current-password" required>
 
-    <p class="error" role="alert" hidden>Sign-in failed.</p>
+    {% if error %}
+    <p class="error" role="alert">{{ error }}</p>
+    {% endif %}
 
     <button type="submit">Sign in</button>
   </form>
